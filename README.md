@@ -10,13 +10,13 @@ CLI for encoding strings according to
 
 ---
 
-`$ coder --help`
+`$ go run cmd/coder.go --help`
 
 Usage of coder:  
-  `$ coder --encode "hello"`
+  `$ go run cmd/coder.go -encode "hello"`
   <br/> will return `"h2ll4"`
 
-`$ coder --decode("h3 th2r2")`
+`$ go run cmd/coder.go -decode "h3 th2r2"`
 <br/> - `"hi there"`
 
 *letter case is ignored in a way :  
