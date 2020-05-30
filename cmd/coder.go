@@ -23,6 +23,6 @@ func process() {
 	} else if len(*text2Decode) != 0 {
 		fmt.Println(engine.Decode(*text2Decode))
 	} else {
-		fmt.Println("Enter command and text. Enter -h for help")
+		fmt.Println("Enter command and text. \nEnter -h for help")
 	}
 }

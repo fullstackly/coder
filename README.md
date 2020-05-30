@@ -9,12 +9,14 @@ CLI for encoding strings according to
 - `u -> 5`
 
 ---
+How to use :
+---
 
-`$ go run cmd/coder.go --help`
+`$ go run cmd/coder.go --h`  
+will show help-menu
 
-Usage of coder:  
-  `$ go run cmd/coder.go -encode "hello"`
-  <br/> will return `"h2ll4"`
+`$ go run cmd/coder.go -encode "hello"`
+<br/> will return `"h2ll4"`
 
 `$ go run cmd/coder.go -decode "h3 th2r2"`
 <br/> - `"hi there"`
