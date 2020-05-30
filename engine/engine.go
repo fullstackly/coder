@@ -1,6 +1,7 @@
 package engine
 
 import (
+	"bytes"
 	"unicode"
 )
 
@@ -22,25 +23,31 @@ func init() {
 }
 
 // Encode encodes string according to vowels table
-func Encode(input string) (result string) {
+func Encode(input string) string {
+	var buf bytes.Buffer
+
 	for _, r := range input {
 		if val, ok := vowels2numbers[unicode.ToLower(r)]; ok {
-			result += string(val)
+			buf.WriteRune(val)
 		} else {
-			result += string(r)
+			buf.WriteRune(r)
 		}
 	}
-	return
+
+	return buf.String()
 }
 
 // Decode decodes encoded string according to vowels table
-func Decode(input string) (result string) {
+func Decode(input string) string {
+	var buf bytes.Buffer
+
 	for _, r := range input {
 		if val, ok := numbers2vowels[r]; ok {
-			result += string(val)
+			buf.WriteRune(val)
 		} else {
-			result += string(r)
+			buf.WriteRune(r)
 		}
 	}
-	return
+
+	return buf.String()
 }
