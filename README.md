@@ -8,17 +8,23 @@ CLI for encoding strings according to
 - `o -> 4`
 - `u -> 5`
 
+
+---
+How to install:  
+---
+`$ go build`
+
 ---
 How to use :
 ---
 
-`$ go run cmd/coder.go --h`  
+`$ ./coder.go --h`  
 will show help-menu
 
-`$ go run cmd/coder.go -encode "hello"`
+`$ ./coder -encode "hello"`
 <br/> will return `"h2ll4"`
 
-`$ go run cmd/coder.go -decode "h3 th2r2"`
+`$ ./coder -decode "h3 th2r2"`
 <br/> - `"hi there"`
 
 *letter case is ignored in a way :  
